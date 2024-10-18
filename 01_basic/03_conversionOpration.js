@@ -22,3 +22,24 @@ let someNumber = 33;
 let stringNumber = String(someNumber) //convert to string
 console.log(stringNumber) // "33"
 console.log(typeof stringNumber)
+
+// **************  Oprations *************
+
+let value = 4;
+let negvalue = -value;
+console.log(negvalue);
+
+// console.log(2**3);
+
+let str = "hello"
+let str2 = " uttam"
+let str3 = str+str2
+console.log(str3) // "hello uttam"
+
+console.log("1" + 2) // 12 string
+console.log(1 + 2) // 3 number
+console.log(2 + 3 + "2") // 52
+
+let GameCounter = 100;
+GameCounter++;
+console.log(GameCounter) // 101
