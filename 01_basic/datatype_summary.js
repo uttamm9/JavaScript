@@ -29,3 +29,26 @@ const myFuntion = function(){
 }
 myFuntion()
 console.log(typeof myFuntion); //funtion
+
+
+// ++++++++++++++++++++++++++++++++++++
+// Memory
+// Stack (premitive), Heap (Non-Premitive)
+
+// stack memory (copy value)
+let myname = "Uttam"
+let anothername = myname
+anothername = "sharma"
+console.log(myname,anothername);
+
+//Heap memory (refrance of value) update in original value
+let userOne = {
+  emial: "uttam@gmail.com",
+  pass: "utaam123"
+}
+let userTwo = userOne
+userTwo.emial = "sharma@gmail.com"
+console.log(userOne.emial);
+console.log(userTwo.emial);
+
+
