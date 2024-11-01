@@ -28,3 +28,19 @@ console.log(Object.keys(tinderUser));//get all keys in an Array
 console.log(Object.values(tinderUser));//get all values in an Array
 
 
+const course = {
+  coursename: "JS in Hindi",
+  price: "999",
+  courseInstructor: "uttam"   
+}
+
+// const {courseInstructor} = course
+// console.log(courseInstructor); //uttam
+const{courseInstructor: Instrutor} = course //Object Destucturin
+console.log(Instrutor); //uttam
+
+// { // JSON file formate use for API fatching
+//   "name": "uttam",
+//   "coursename": "js in Hinid",
+//   "price": 3453
+// }
