@@ -32,4 +32,25 @@ function loginMsg(username){//to avoid flase use username = "anything"
   }
   return `${username} just logged in`
 }
-console.log(loginMsg());
+// console.log(loginMsg());
+
+function claculateCartPrice(...num){ // ...rest (sprade) oprater
+  return num //reutn an Array
+}
+// console.log(claculateCartPrice(453,500,355,700)); // An Array
+
+const user = {
+  username: "uttam",
+  Id: "u999"
+}
+function handleObject(anyObject){
+  console.log(`username is ${anyObject.username} and userid is ${anyObject.Id}`);
+}
+
+handleObject(user)
+
+const newarray = [234,64,3221,675,34]
+function secondvalue(getArray){
+    return getArray[1]
+}
+console.log(secondvalue(newarray));
