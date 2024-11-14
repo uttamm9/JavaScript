@@ -41,6 +41,28 @@ if(score>100){
     console.log("user logged in");
   }
 
-      
-      
-      
+// falsy value    
+// 0, -0, "", BigInt (0n), null, undefined, Nan, flase
+
+//truty value
+  // "0", 'false', " ", [], {}, function(){}, 
+
+  const emptyObj =  {}
+
+  if(Object.keys(emptyObj).length === 0){
+    console.log("object is empty")
+  }
+
+  //nullish coalicing oprater (??)
+   
+  let val1;
+  // val1 = 5 ?? 10; // 5
+  // val1 = null?? 20 // 20
+
+  val1 = null ?? 15 ?? 25 //15
+  console.log(val1) // 5, 20
+
+  // terniary oparetor
+  // condition ? true : false
+  const age = 25
+  age>22 ? console.log("young") : console.log("old")
