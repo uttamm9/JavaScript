@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM module</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+  
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+</body>
+<script>
+  //add value in new li(list)
+  function addlang(lagname){
+    const li = document.createElement('li')
+    li.innerHTML = lagname
+    document.querySelector('.language').appendChild(li)
+  }
+  addlang('java')
+  addlang('CPP')
+
+  //or
+function AddOptilanguage(langName){
+  const li = document.createElement('li')
+  li.appendChild(document.createTextNode(langName))
+  document.querySelector('.language').appendChild(li)
+}
+AddOptilanguage("Python")
+
+//Edit
+const secondlang = document.querySelector('li:nth-child(2)')
+// secondlang.innerHTML = "python to mojo"
+const newli = document.createElement('li')
+newli.textContent = "python to mojo"
+secondlang.replaceWith(newli)
+
+//edit
+const editlang = document.querySelector("li:first-child")
+editlang.outerHTML = '<li>Javascript to JS</li>'
+
+//remove
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+
+
+</script>
+</html>
