@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+   .container{
+            border: 2px solid black;
+            width: 700px;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: self-start;
+        }
+        .box{
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+        }
+        .dev{
+            width: 65%;
+            /* border: 1px solid violet; */
+            display: flex;
+            flex-wrap: wrap;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+</style>
+<body>
+  <div class="container">
+
+        <div style="margin-top: 20px;">
+        <input type="text" id="color" placeholder="color">
+        <input type="text" id="div" placeholder="number">
+        <button id="Submit">Submit</button>
+    </div>
+    
+    <div class="dev">
+      <div class="box" id="1"></div>
+      <div class="box"id="2"></div>
+      <div class="box"id="3"></div>
+      <div class="box"id="4"></div>
+      <div class="box"id="5"></div>
+      <div class="box"id="6"></div>
+      <div class="box"id="7"></div>
+      <div class="box"id="8"></div>
+  </div>
+
+  <script>
+    document.querySelector("#Submit").onclick = function(){
+        const color = document.querySelector("#color").value;
+        let num = document.querySelector("#div").value;
+        let divs = document.querySelectorAll('.box')
+
+        for(let i of divs){
+            // console.log(i)
+          if(i.id == num){
+            i.style.backgroundColor = color
+          }
+        }
+    }
+  </script>
+</body>
+</html>

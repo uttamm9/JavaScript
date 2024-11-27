@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color change</title>
+  
+  <style>
+    .button{
+      height: 100px;
+      width: 100px;
+      border: 2px solid black;
+    }
+    .parant{
+      display: flex;
+      flex-wrap: wrap;
+      width: 350px;
+      height: 300px;
+      justify-content: center;
+      /* align-items: center; */
+    }
+    #gray{
+      background-color: gray;
+    }
+    #white{
+      background-color: #fff;
+    }
+    #red{
+      background-color: red;
+    }
+    #yellow{
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="parant">
+    <h2>color Scheme Swithcher</h2>
+      <div class="button" id="gray">hello</div>
+      <div class="button" id="white"></div>
+      <div class="button" id="red"></div>
+      <div class="button" id="yellow"></div>
+      <h2>Try clicking on one of the above 
+      <span>to change the background color of this page!</span> </h2>
+  </div>
+</body>
+<script>
+  const buttons = document.querySelectorAll('.button')
+  const bodys = document.querySelector('body');
+  // console.log(buttons)
+  buttons.forEach(function (button) {
+    // console.log(button)
+    button.addEventListener('click',function(e){
+      // console.log(e.target.id)
+      bodys.style.backgroundColor = e.target.id
+    })
+  })  
+
+</script>
+</html>
