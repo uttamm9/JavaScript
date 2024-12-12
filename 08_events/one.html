@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: #414141; color: aliceblue;">
   <h2>Amazing images</h2>
-  <ul>
+  <ul id="images">
     <li><img width="200" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Background-Beautiful-Nature-Images-HD.jpg" id="photoshop" alt="photoshop"></li>
     <li><img width="200"  src="https://www.pixelstalk.net/wp-content/uploads/2016/07/3D-Nature-Images-Free-Download.jpg" id="sun" alt=""></li>
     <li><img width="200"  src="https://jooinn.com/images/lonely-tree-reflection-3.jpg" id="tree" alt=""></li>
@@ -16,9 +16,33 @@
   </ul>
 </body>
 <script>
-  document.getElementById('sun').addEventListener('click',function(e){
-    // alert("sun on midway")
-    console.log(e)
-  },false)
+  // document.getElementById('images').addEventListener('click',function(e){
+  //   // alert("sun on midway")
+  //   console.log('clicked in UL')
+  // },false)
+  // // Event Propegation => 3 Stage
+  // // 1. Bubbling Phase-> Event bottem se top tarvel krta h (flase)
+  // document.getElementById('sun').addEventListener('click',function(e){
+  //   e.stopPropagation() // for stop event bubbling
+  //   console.log('clicked on sun')
+  // },false)
+  // //2. Capturing Phase ->Event top se bottem travel krta h (true)
+
+  // document.getElementById('google').addEventListener('click',function(e){
+  //   e.preventDefault()
+  //   e.stopPropagation()
+  //   console.log("google clicked")
+  // })
+
+  document.querySelector('#images').addEventListener('click',function(e){
+    //strict checks
+    if(e.target.tagName === 'IMG'){
+      let removeIt = e.target.parentNode;
+      console.log(e.target.tagName,e.target.id)
+      removeIt.remove()
+    }
+   
+  })
+
 </script>
 </html>
