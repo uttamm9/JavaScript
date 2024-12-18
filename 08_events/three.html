@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>jai jai shree</h1>
+  <button id="start">Start change background Color</button>
+  <button id="stop">Stop changing</button>
+  <button id="fc">FirstCLG</button>
+  <button id="sc">SecondCLG</button>
+</body>
+<script>
+  const saydate = function(str){
+    console.log(str,Date.now())
+  }
+ let Inter;
+    // clearInterval(Inter)
+  document.querySelector('#fc').addEventListener('click',function(){
+    Inter = setInterval(saydate,1000,'uttam');
+    console.log(Inter)
+  })
+  document.querySelector('#sc').addEventListener('click',function(){
+    console.log('stop');
+    clearInterval(Inter);
+  })
+
+//+++++++++++++++++====================++++++++))((()))
+const randomColor = function(){
+const hex = '0123456789abcdef'
+let color = '#'
+for(let i=0;i<6;i++){
+  color+=hex[Math.floor(Math.random()*16)]
+}
+return color
+}
+console.log(randomColor())
+let intervalID
+
+const startBGC = function(){
+  if(!intervalID){
+    intervalID = setInterval(changeBGC,1000);
+  }
+function changeBGC (){
+  document.body.style.backgroundColor = randomColor();
+}
+}
+document.querySelector('#start').addEventListener('click',startBGC)
+
+
+const stopBGC = function(){
+  console.log('stop')
+  clearInterval(intervalID);
+intervalID = null;
+};
+document.querySelector('#stop').addEventListener('click',stopBGC)
+</script>
+</html>

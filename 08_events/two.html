@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>jai jai shree</h1>
+  <button id="stop">Stop</button>
+</body>
+<script>
+  // setTimeout(() => {
+  //   console.log("helo bahiu")
+  // }, 2000); //take time to excute code
+  const sayJai = function(){
+        console.log("say jai jai jai")
+  }
+  setTimeout(sayJai,2000)
+
+  const changeText = function(){
+    document.querySelector('h1').innerHTML="dilli chalo"
+  }
+  // setTimeout(changeText, 2000);
+
+  const stopTime = setTimeout(changeText,2000)
+  document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(stopTime)
+    console.log('stopped')
+  })
+</script>
+</html>
