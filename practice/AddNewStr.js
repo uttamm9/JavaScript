@@ -9,3 +9,10 @@ const addstr = (str)=>{
   return a+=str;
 }
 console.log(addstr("hello bro"))
+
+//add two sting except their first charecter
+const concatenate = (str1,str2) => {
+  return str1.slice(1)+str2.slice(1)
+}
+console.log(concatenate('abc','dfe'))
+console.log(concatenate('software','devloper'))
