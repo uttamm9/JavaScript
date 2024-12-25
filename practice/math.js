@@ -19,4 +19,15 @@ const arrayofNumbers = num =>{
   }
   return returnArray
 }
-console.log(countEven(arrayofNumbers(12)))
+// console.log(countEven(arrayofNumbers(12)))
+
+//write a JS program to check whether a given array is sorter in ascending order
+const checkArray = (num)=>{
+  for(let i=1;i<num.length;i++){
+    if(num[i]<num[i-1]){
+      return false;
+    }
+  }
+  return true
+}
+console.log(checkArray([3,4,3,4,5,6]))
