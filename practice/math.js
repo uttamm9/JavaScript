@@ -30,4 +30,16 @@ const checkArray = (num)=>{
   }
   return true
 }
-console.log(checkArray([3,4,3,4,5,6]))
+// console.log(checkArray([3,4,3,4,5,6]))
+
+//given year is leap or not;
+const isleap = (year)=>{
+  if((year%4===0 && year%100!=0) || year%400===0){
+    return true;
+  }
+  else{
+    return false
+  }
+}
+console.log(isleap(2024))
+console.log(isleap(2022))
