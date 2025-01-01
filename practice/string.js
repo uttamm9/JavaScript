@@ -20,4 +20,15 @@ const converCSV = (str)=>{
 let str = `abc,def,ghi
 jkl,mno,pqr
 stu,vwx,yza`;
-console.log(converCSV(str))
+console.log(converCSV(str))//
+
+
+//Q. rearange string to alphabetical order
+const alphabeticalOrder = (str)=>{
+  str = str.toLowerCase()
+  let a = str.split('')
+  let b = a.sort((a,b)=>a>b ? 1 : -1).join('')
+  return b;
+}
+console.log(alphabeticalOrder('webmaster'))
+console.log(alphabeticalOrder('jawaScript'))
