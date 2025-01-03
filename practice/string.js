@@ -20,7 +20,7 @@ const converCSV = (str)=>{
 let str = `abc,def,ghi
 jkl,mno,pqr
 stu,vwx,yza`;
-console.log(converCSV(str))//
+// console.log(converCSV(str))
 
 
 //Q. rearange string to alphabetical order
@@ -30,5 +30,16 @@ const alphabeticalOrder = (str)=>{
   let b = a.sort((a,b)=>a>b ? 1 : -1).join('')
   return b;
 }
-console.log(alphabeticalOrder('webmaster'))
-console.log(alphabeticalOrder('jawaScript'))
+// console.log(alphabeticalOrder('webmaster'))
+// console.log(alphabeticalOrder('jawaScript'))
+
+
+//Q. write a JS fnx that accept a string as a parameter and count the number of vowels within the string
+const countlatters = (str)=>{
+  let latterArray = ['a','e','i','o','u'];
+  let arr = str.split('')
+  let count = arr.filter(s=>latterArray.indexOf(s)>-1).length
+  return count
+}
+console.log(countlatters('abcde'))
+console.log(countlatters('about'))
