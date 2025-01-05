@@ -5,8 +5,8 @@ const close100 = (a,b)=> (100-a)<(100-b)?a:b
 
 const countevenNumber = (arr)=>arr.filter(num=>num%2===0).length
 
-console.log(countevenNumber([1,2,3,2,4,3,4,3,5,4,6]))
-console.log(countevenNumber([1,2,3,2,4,3,4,3,5,7,7]))
+// console.log(countevenNumber([1,2,3,2,4,3,4,3,5,4,6]))
+// console.log(countevenNumber([1,2,3,2,4,3,4,3,5,7,7]))
 
 //write a JS program to find the numbers of even values up to a given number
 
@@ -41,5 +41,22 @@ const isleap = (year)=>{
     return false
   }
 }
-console.log(isleap(2024))
-console.log(isleap(2022))
+// console.log(isleap(2024))
+// console.log(isleap(2022))
+
+
+//Q. a JS program to convert an amount to coin
+const countcoint = (money,coin = [10,5,2,1])=>{
+  const totalcoin = []
+for(let i=0;i<coin.length;i++){
+  const thiscoinNum = Math.floor(money/coin[i]);
+  for(let j=0;j<thiscoinNum;j++){
+    totalcoin.push(coin[i])
+  } 
+  money -=coin[i]*thiscoinNum; 
+}
+return totalcoin;
+
+}
+
+console.log(countcoint(46))
