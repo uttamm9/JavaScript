@@ -41,5 +41,20 @@ const countlatters = (str)=>{
   let count = arr.filter(s=>latterArray.indexOf(s)>-1).length
   return count
 }
-console.log(countlatters('abcde'))
-console.log(countlatters('about'))
+// console.log(countlatters('abcde'))
+// console.log(countlatters('about'))
+
+
+// Q. write a JS program to extract unique chareters from a string.
+  const getUniqueChar = (str)=>{
+    let newarr = str.split('')
+    return newarr.filter((item,index,arr)=>{
+      return arr.slice(index+1).indexOf(item)===-1
+    });
+  }
+  const seondWay = (str)=>{
+    // return new Set(str.split('')) //get in set
+    return [...new Set(str.split(''))] //get in array formate
+  }
+  console.log(getUniqueChar('aaavvvffffdddd'))
+  console.log(seondWay('wwwddffvwddc'))
