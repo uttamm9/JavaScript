@@ -58,3 +58,15 @@ const countlatters = (str)=>{
   }
   console.log(getUniqueChar('aaavvvffffdddd'))
   console.log(seondWay('wwwddffvwddc'))
+
+  //Q. write a JS program to find first non-repeating charecter.
+
+  const firstNonRepeatingChar = (str)=>{
+    let arr = str.split('')
+    let result = arr.filter((item,index,arr)=>{
+      return arr.indexOf(item)===arr.lastIndexOf(item)
+    })
+    return result[0]
+  }
+  console.log(firstNonRepeatingChar('abacddbec')) //e
+  console.log(firstNonRepeatingChar('abcab')) //c
