@@ -59,4 +59,12 @@ return totalcoin;
 
 }
 
-console.log(countcoint(46))
+// console.log(countcoint(46))
+
+// Q. Calculate the area of a triangle
+const areaofTriangle = (side1,side2,side3)=>{
+  let s  = (side1+side2+side3)/2;
+  return Math.sqrt(s*((s-side1)*(s-side2)*(s-side3)))
+}
+
+console.log(areaofTriangle(5,6,7))
