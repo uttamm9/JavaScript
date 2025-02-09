@@ -22,3 +22,12 @@ console.log(objectEqual(OBJ_2,OBJ_3))//false
 
   let array1 = Object.keys(obj).map(key=>obj[key])
   console.log(array)//[1,2,3]
+
+//Q. 
+console.log(3 + true) //4
+console.log(true + 3) //4
+
+console.log('5' + 3) //53
+console.log(3 + '5') //35
+console.log(3 - - '5')//8
+console.log('5' + + 5)//55
