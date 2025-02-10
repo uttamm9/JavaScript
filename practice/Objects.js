@@ -27,7 +27,11 @@ console.log(objectEqual(OBJ_2,OBJ_3))//false
 console.log(3 + true) //4
 console.log(true + 3) //4
 
-console.log('5' + 3) //53
-console.log(3 + '5') //35
-console.log(3 - - '5')//8
-console.log('5' + + 5)//55
+// console.log('5' + 3) //53
+// console.log(3 + '5') //35
+// console.log(3 - - '5')//8
+// console.log('5' + + 5)//55
+
+const objt = {a:'JS'}
+const {a,a:b,a:c} = objt;
+console.log(a,b,c) // JS JS JS
