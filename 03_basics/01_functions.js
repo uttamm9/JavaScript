@@ -54,3 +54,22 @@ function secondvalue(getArray){
     return getArray[1]
 }
 console.log(secondvalue(newarray));
+
+// callback funtion 
+// A function that takes another function (callback) as a parameter
+const fatchData = (callback)=>{
+  console.log('fatching data....')
+  // Simulating data fetched after 2 seconds
+  setTimeout(() => {
+    const data = "your data is here";
+    callback(data) // The callback is called with the data
+  }, 2000);
+}
+
+// A callback function that gets executed after the data is fetched
+const displayData = (data)=>{
+  console.log(data) // This prints: "Here is your data!"
+}
+
+// Calling the fetchData function and passing displayData as the callback
+fatchData(displayData)
