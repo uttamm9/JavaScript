@@ -13,3 +13,7 @@
   // simple iife
   console.log(`${name} take coffee`)
 })('uttam'); //uttam is argument
+
+(function chai(){
+  console.log('iif hii')
+})()

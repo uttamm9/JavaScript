@@ -24,10 +24,35 @@ const newArr = myArray.join()
 // console.log(newArr); // convert array to string
 
 const mySlice = myArray.slice(1,3);
-console.log(mySlice); // return array from 1 to 2 index value
+// console.log(mySlice); // return array from 1 to 2 index value
 
-console.log("B", myArray); // original array remain same
+// console.log("B", myArray); // original array remain same
 const mySplice = myArray.splice(1,3);
-console.log(mySplice); // return array from 1 to 3 index value
+// console.log(mySplice); // return array from 1 to 3 index value
 
-console.log("C", myArray); // original array change
+// console.log("C", myArray); // original array change
+
+const arr = [2,3,1,5,4,2,6];
+arr.splice(3,1);
+// console.log(arr)
+const arr2 = arr.map((item) => {
+  return item;
+})
+// console.log(arr2)
+
+let evennum = arr.filter((num)=>{
+  return num%2==0;
+})
+// console.log(evennum)
+
+let reduc = arr.reduce((total,num)=>{
+    return total+num;
+})
+// console.log(reduc)
+
+let findnum = arr.find((num) => {
+  return num.toString().startsWith('4');
+});
+// console.log(findnum);
+
+// console.log(arr2.includes(6))

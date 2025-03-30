@@ -20,15 +20,15 @@ map.set('IN',"India")
 map.set('US',"USA")
 map.set('UK',"United Kingdom")
 
-// console.log(map)
-// for (const [key,value] of map) { //destucture of array
-//   console.log(key, '->', value)
-// }
+console.log(map)
+for (const [key,value] of map) { //destucture of array
+  console.log(key, '->', value)
+}
 
 const myObject = {
   'name': 'uttam',
   'age': 25,
 }
-// for (const [key , value] of myObject) {
-//   console.log(key, '->', value)// Error
-// }
+for (const [key, value] of Object.entries(myObject)) {
+  console.log(key, '->', value); // Fixed
+}

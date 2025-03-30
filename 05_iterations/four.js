@@ -5,10 +5,10 @@ const myObject = {
   swift: 'swift by apple'
 }
 
-// for (const key in myObject) {
-//   console.log(`${key} shortcut is for ${myObject[key]}`)
+for (const key in myObject) {
+  console.log(`${key} shortcut is for ${myObject[key]}`)
   
-//   }
+  }
 
 const programin = ['js','cpp','py','java','rb']
 
