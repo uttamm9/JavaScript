@@ -11,8 +11,8 @@
 // console.log(halfstr('abcde'))
 // console.log(halfstr('abcdef'))
 
-let n = 5;
-// let p='';
+let n = 7;
+// let p=''
 for (let i = 1; i <= n; i++) {
   let p = '';
   for (let s = 1; s <= n - i; s++) {
