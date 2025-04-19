@@ -43,3 +43,17 @@ const rect = new Rectangle(10, 5);
 console.log("Area:", rect.getArea());
 console.log("Perimeter:", rect.getPerimeter());
 
+let x = 121;
+
+const isPalindrome = (x) => {
+ let temp = x;
+ let sum = 0;
+ while (x > 0) {
+   let digit = x % 10;
+   sum = sum * 10 + digit;
+   x = Math.floor(x / 10);
+  }
+  return temp === sum;
+}
+isPalindrome(x) ? console.log("Palindrome") : console.log("Not Palindrome")
+
